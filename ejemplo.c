@@ -11,9 +11,9 @@ struct alumno
 int main()
 {
     int i;
-    int h;
+    int h=0;
     
-    struct alumno alumnos[h];
+    struct alumno a[100];
     do
     {
         printf("Ingrese una opcion \n");
@@ -24,26 +24,32 @@ int main()
         switch (i)
         {
         case 1:
-            h=1;
-            printf("Ingresar un nuevo alumno");
-            scanf("%d", &alumnos[h].matricula);
-            gets(alumnos[h].nombre);
-            gets(alumnos[h].direccion);
-            gets(alumnos[h].materia);
+            printf("Ingresar un nuevo alumno\n");
+            printf("Ingrese la matricula \n");
+            scanf("%d", &a[h].matricula);
+            fflush(stdin);
+            printf("Ingrese el nombre \n");
+            gets(a[h].nombre);
+            printf("Ingrese la direccion \n");
+            gets(a[h].direccion);
+            printf("Ingrese la materia \n");
+            gets(a[h].materia);
+            printf("Ingrese la nota \n");
+            scanf("%f", &a[h].nota);
+            fflush(stdin);
             h++;
             break;
         case 2:
-            printf("Mostrar el listado de los alumnos");
-            puts(alumnos[h].matricula);
+        
             break;    
         case 3:
-            puts("gracias por usar el programa");
+            printf("Gracias por usar el programa \n");
             break;
         default:
-            printf("No existe esa opcion");
+            printf("No existe esa opcion \n");
             break;
         }
-    } while (i==3);
+    } while (i<3);
     
         
     return 0;

@@ -40,19 +40,20 @@ int main()
             h++;
             break;
         case 2:
-        {
-            printf("Alumno %d \n",i+1);
-            printf("Matricula: \n");
-            printf("%d \n", a[h].matricula);
-            printf("Nombre: \n");
-            puts(a[h].nombre);
-            printf("Direccion: \n");
-            puts(a[h].direccion);
-            printf("Materia: \n");
-            puts(a[h].materia);
-            printf("Nota: \n");
-            printf("%f \n", a[h].nota);
-        }
+            for (int i = 0; i < h; i++)
+            {
+                printf("Alumno %d \n",i+1);
+                printf("Matricula: \n");
+                printf("%d \n", a[i].matricula);
+                printf("Nombre: \n");
+                puts(a[i].nombre);
+                printf("Direccion: \n");
+                puts(a[i].direccion);
+                printf("Materia: \n");
+                puts(a[i].materia);
+                printf("Nota: \n");
+                printf("%f \n", a[i].nota);
+            }
             break;    
         case 3:
             printf("Gracias por usar el programa \n");
